@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View"/>
+    </data>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/scrollView" >
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hello World!"
+                        android:id="@+id/txt1"/>
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/img1"/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:orientation="horizontal">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:id="@+id/txtSuccess"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:id="@+id/txtTerms"/>
+                </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:id="@+id/txtPrivacy"/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:orientation="horizontal">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:id="@+id/txtTimesStamp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:id="@+id/txtSource"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:id="@+id/txtQuotes"/>
+
+                </LinearLayout>
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="(data cơ sở)"
+                                android:id="@+id/textView17"
+                                android:background="#acbbff"
+                                android:layout_gravity="right" />
+                        <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                            <EditText
+                                    android:layout_width="54dp"
+                                    android:layout_height="match_parent"
+                                    android:inputType="number"
+                                    android:ems="10"
+                                    android:id="@+id/txtWebServiceKSOAPdoC"
+                                    android:hint="Nhập Độ C" android:textSize="9sp" android:gravity="center"/>
+
+                            <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="Độ F"
+                                    android:id="@+id/btnWebServiceKSOAPdoF" android:textSize="9sp" android:gravity="center"/>
+
+                            <TextView
+                                    android:layout_width="45dp"
+                                    android:layout_height="match_parent"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:id="@+id/txtWebServiceKSOAPdoF"
+                                    android:layout_gravity="center"
+                                    android:hint="Độ F" android:textSize="9sp" android:gravity="center"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" >
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="_WebService KSOAP_(data Object data)"
+                                android:id="@+id/textView27"
+                                android:background="#acbbff"
+                                android:layout_gravity="left"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="WebService dạng KSOAP (data dạng List Object data))"
+                        android:id="@+id/textView28"
+                        android:background="#acbbff"
+                        android:layout_gravity="center"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="WEB SERVER: DẠNG JSON nguyên thủy"
+                        android:id="@+id/textView25"
+                        android:background="#eaffbd" />
+
+                <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="224dp"
+                        android:id="@+id/lvWebServiceJSONListInforPerson"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="WEB SERVER: DẠNG GSON"
+                        android:id="@+id/textView26"
+                        android:background="#f4ffcd" />
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <EditText
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtWebServiceGSONKeyWord"
+                            android:hint="Nhập chuỗi GSON cần tìm" />
+
+                    <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Search"
+                            android:id="@+id/btnWebServiceGSONSearch" />
+                </LinearLayout>
+
+                <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="268dp"
+                        android:id="@+id/lvWebServiceGSONSearch"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Project WebService:  Tỷ zá hối đoái Ngân Hàng Đông Á"
+                        android:id="@+id/textView29" />
+
+                <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="1300dp"
+                        android:id="@+id/lvTyZaHoiDoaiNHDongA_JSON" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>
